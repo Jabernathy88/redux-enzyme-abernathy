@@ -1,3 +1,22 @@
-.App {
+/* root layout */
+html, body, #root, .App {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: block;
+}
+html {
+  /* font-family: 'Arial', 'Helvetica', 'Open Sans', sans-serif; */
+  /* font-size: 14px; */
+  background: rgb(255,255,255);
+}
+/* clear bootstrap defaults */
+div, header, footer {
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
   margin: 0;
 }
