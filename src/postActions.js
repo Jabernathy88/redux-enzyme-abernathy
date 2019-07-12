@@ -37,8 +37,8 @@ export function fetchPosts() {
     dispatch(fetchPostsBegin());
     return fakeGetPosts()
     .then(json => {
-      dispatch(fetchPostsSuccess(json.products));
-      return json.products;
+      dispatch(fetchPostsSuccess(json.posts));
+      return json.posts;
     })
     .catch(error => 
       dispatch(fetchPostsFailure(error))
@@ -54,17 +54,17 @@ function handleErrors(response) {
   return response;
 }
 
-export const FETCH_POSTS_BEGIN = "FETCH_PRODUCTS_BEGIN";
-export const FETCH_POSTS_SUCCESS = "FETCH_PRODUCTS_SUCCESS";
-export const FETCH_POSTS_FAILURE = "FETCH_PRODUCTS_FAILRE";
+export const FETCH_POSTS_BEGIN = "FETCH_posts_BEGIN";
+export const FETCH_POSTS_SUCCESS = "FETCH_posts_SUCCESS";
+export const FETCH_POSTS_FAILURE = "FETCH_posts_FAILRE";
 
 export const fetchPostsBegin = () => ({
   type: FETCH_POSTS_BEGIN
 })
 
-export const fetchPostsSuccess = products => ({
+export const fetchPostsSuccess = posts => ({
   type: FETCH_POSTS_SUCCESS,
-  payload: { products }
+  payload: { posts }
 })
 
 export const fetchPostsFailure = error => ({
