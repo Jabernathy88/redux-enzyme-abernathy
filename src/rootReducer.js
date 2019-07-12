@@ -1,11 +1,6 @@
-import React from 'react';
+import { combineReducers } from "redux";
+import posts from "./postReducer"
 
-const rootReducer = () => {
-  return (
-    <div>
-      
-    </div>
-  );
-};
-
-export default rootReducer;
+export default combineReducers({
+  posts
+})
