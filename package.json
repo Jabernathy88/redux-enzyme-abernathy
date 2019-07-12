@@ -39,6 +39,12 @@
     "check-prop-types": "^1.1.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
     "jest-enzyme": "^7.0.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^config$": "<rootDir>/path/to/App/config.js"
+    }
   }
 }
